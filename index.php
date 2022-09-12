@@ -9,7 +9,6 @@
                 <table>
                     <tr>
                         <th>Club</th>
-                        <th>GP</th>
                         <th>PTS</th>
                     </tr>
                 </tablr>
@@ -19,47 +18,40 @@
         <section>
             <?php
                 $teams = array(
-                    "Atalanta"
-                    "Bolonga"
-                    "Cremonese"
-                    "Empoli"
-                    "Fiorentina"
-                    "Verona"
-                    "Inter Milan"
-                    "Juventus"
-                    "Lazio"
-                    "Lecce"
-                    "AC Milan"
-                    "Monza"
-                    "Napoli"
-                    "Roma"
-                    "Salernitana"
-                    "Sampdoria"
-                    "Sassuolo"
-                    "Spezia"
-                    "Torino"
-                    "Udinese");
-                $points = array(
-                    "Atalanta" => ("3, 1, 3, 3, 3")
-                    "Bolonga" => ("0, 1, 0, 1, 1")
-                    "Cremonese" => ("0, 0, 0, 0, 1")
-                    "Empoli" => ("0, 1, 1, 1, 1")
-                    "Fiorentina" => ("3, 1, 1, 0, 1")
-                    "Verona" =>("0, 1, 0, 1, 3")
-                    "Inter Milan" =>("3, 3, 0, 3, 0")
-                    "Juventus" => ("3, 1, 1, 3, 1")
-                    "Lazio" => ("3, 1, 3, 1, 0")
-                    "Lecce" => ("0, 0, 1, 1, 0")
-                    "AC Milan" =>("3, 1, 3, 1, 3")
-                    "Monza" => ("0, 0, 0, 0, 0")
-                    "Napoli" => ("3, 3, 1, 1, 3")
-                    "Roma" => ("3, 3, 1, 3, 0")
-                    "Salernitana" => ("0, 1, 3, 1, 1")
-                    "Sampdoria" => ("0, 1, 0, 1, 0")
-                    "Sassuolo" => ("0, 3, 1, 1 ,1")
-                    "Spezia" => ("3, 0, 1, 0, 1")
-                    "Torino" => ("3, 1, 3, 0, 3")
-                    "Udinese" => ("0, 1, 3, 3, 3"));
+                     "Atalanta" => array(3, 1, 3, 3, 3, 1),
+                     "Bolonga" => array(0, 1, 0, 1, 1, 3),
+                     "Cremonese" => array(0, 0, 0, 0, 1, 1),
+                     "Empoli" => array(0, 1, 1, 1, 1),
+                     "Fiorentina" => array(3, 1, 1, 0, 1, 0),
+                     "Inter Milan" => array(3, 3, 0, 3, 0, 3),
+                     "Juventus" => array(3, 1, 1, 3, 1, 1),
+                     "Lazio" => array(3, 1, 3, 1, 0, 3),
+                     "Lecce" => array(0, 0, 1, 1, 0, 1),
+                     "AC Milan" => array(3, 1, 3, 1, 3, 3),
+                     "Monza" => array(0, 0, 0, 0, 0, 1),
+                     "Napoli" => array(3, 3, 1, 1, 3, 3),
+                     "Roma" => array(3, 3, 1, 3, 0),
+                     "Salernitana" => array(0, 1, 3, 1, 1, 1),
+                     "Sampdoria" => array(0, 1, 0, 1, 0, 0),
+                     "Sassuolo" => array(0, 3, 1, 1 ,1, 0),
+                     "Spezia" => array(3, 0, 1, 0, 1, 0),
+                     "Torino" => array(3, 1, 3, 0, 3, 0),
+                     "Udinese" => array(0, 1, 3, 3, 3, 3),
+                     "Verona" => array(0, 1, 0, 1, 3, 0));
+                    
+                
+                    foreach ( $teams as $team => $points ) {
+                        echo( $team . " total points is ");
+                    
+                        $currentTeamPointsTotal = 0;
+                        for( $currentTeamPointsIndex = 0; $currentTeamPointsIndex < count( $points ); $currentTeamPointsIndex++ ) {
+                            $currentTeamPointsTotal = $currentTeamPointsTotal + $points[ $currentTeamPointsIndex ];   
+                        
+                        }
+
+                        echo($currentTeamPointsTotal . "<br>" );
+    
+                    } 
             ?>
         </section>
     </body>
