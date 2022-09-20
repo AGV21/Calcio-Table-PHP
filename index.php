@@ -38,19 +38,40 @@
                      "Torino" => array(3, 1, 3, 0, 3, 0, 0),
                      "Udinese" => array(0, 1, 3, 3, 3, 3, 3),
                      "Verona" => array(0, 1, 0, 1, 3, 0, 0));
-                    arsort($teams);
+                    //arsort($teams);
                     function italy(){
                         echo"Serie A <br>";
                     }
                     italy();
+                    $teampointsArray = [];
                     foreach ( $teams as $team => $points ) {
-                        //echo( $team . " total points is ");
+                    //echo( $team . " total points is ");
                         $currentTeamPointsTotal = 0;
                         for( $currentTeamPointsIndex = 0; $currentTeamPointsIndex < count( $points ); $currentTeamPointsIndex++ ) {
                             $currentTeamPointsTotal = $currentTeamPointsTotal + $points[ $currentTeamPointsIndex ];
                         
                         }
-                    echo($currentTeamPointsTotal . "<br>" );}
+                    // $teampoints = array($currentTeamPointsTotal);
+                    array_push($teampointsArray, $team, $currentTeamPointsTotal);
+                    //print_r(sort($teampoints[0]) .  "<br>");
+                    /*echo($currentTeamPointsTotal . "<br>" );*/}
+                    echo(gettype($teampointsArray));
+                    // print_r($teampointsArray);
+                    // print_r($teampointsArray[0]);
+                    rsort($teampointsArray);
+                    // print_r($teampointsArray);
+                    printOutSortedArray($teampointsArray);
+
+                    function printOutSortedArray($array) {
+                        foreach($array as $team => $score) {
+                            echo($score . "<br>");
+                        }
+                    }
+
+        
+
+
+                    
             ?>          
         </section>
     </body>
