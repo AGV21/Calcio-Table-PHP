@@ -7,16 +7,37 @@
     <body id="mainContainer">
         <section>
             <?php
-
+            $currentTeamNumber = 0;
+            
             function printOutSortedArray($array) {
                 foreach($array as $teamss => $score) {
+                    global $currentTeamNumber;
+                    $currentTeamNumber +=1;
             ?>
-                    <tr>
+                    <tr 
+    <?php
+                    if ( $currentTeamNumber == 1 ) {
+    ?>
+                        class="currentLeader";
+    <?php
+                    }elseif ($currentTeamNumber == 5){
+    ?>
+                        class="UEL";
+    <?php
+                    }elseif ($currentTeamNumber == 20){
+    ?>
+                        class="lastPlace"
+    <?php
+
+                    }
+    ?>
+                    >
                         <td><?php echo( $teamss ); ?></td>
-                        <td><?php echo( $score ); ?></td>
+                        <td><?php echo(  $score ); ?></td>
                     </tr>
             <?php
-                }}       
+                }
+            }       
                 $teams = array(
                      "Atalanta" => array(3, 1, 3, 3, 3, 1, 3),
                      "Bolonga" => array(0, 1, 0, 1, 1, 3, 0),
