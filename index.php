@@ -16,8 +16,7 @@
                         <td><?php echo( $score ); ?></td>
                     </tr>
             <?php
-                }
-            }       
+                }}       
                 $teams = array(
                      "Atalanta" => array(3, 1, 3, 3, 3, 1, 3),
                      "Bolonga" => array(0, 1, 0, 1, 1, 3, 0),
@@ -41,31 +40,22 @@
                      "Verona" => array(0, 1, 0, 1, 3, 0, 0));
 
                     function italy(){
-                        echo"Serie A <br>";
-                    }
+                        echo"Serie A <br>";}
+
                     italy();
                     $teamNames = [];
                     $teampointsArray = [];
+
                     foreach ( $teams as $team => $points ) {
-                    //echo( $team . " total points is ");
                         $currentTeamPointsTotal = 0;
                         for( $currentTeamPointsIndex = 0; $currentTeamPointsIndex < count( $points ); $currentTeamPointsIndex++ ) {
                             $currentTeamPointsTotal = $currentTeamPointsTotal + $points[ $currentTeamPointsIndex ];
                         }
                     array_push($teampointsArray, $currentTeamPointsTotal);
                     array_push($teamNames, $team);
-                    $final = array_combine($teamNames, $teampointsArray);
-                    //array_merge($teamArray, $teampointsArray);
-                    //print_r(sort($teampoints[0]) .  "<br>");
-                    /*echo($currentTeamPointsTotal . "<br>" );*/}
-                    //echo(gettype($final));
-                    //echo(gettype($teampointsArray));
-                    // print_r($teampointsArray);
-                    // print_r($teampointsArray[0]);
-                    //rsort($teampointsArray);
+                    $final = array_combine($teamNames, $teampointsArray);}
+
                     arsort($final);
-                    // print_r($teampointsArray);
-                    //printOutSortedArray($teampointsArray);
             ?>
                     <table>
                         <tr><th>Team</th><th>Points</th></tr>
