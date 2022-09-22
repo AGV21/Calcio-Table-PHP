@@ -2,21 +2,22 @@
 <html>
     <head>
         <title>Serie A</title>
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body id="mainContainer">
-        <section> 
-            <div class="Table">
-                <table>
-                    <tr>
-                        <th>Club</th>
-                        <th>PTS</th>
-                    </tr>
-                </tablr>
-            </div>
-        </section>
-
         <section>
             <?php
+
+            function printOutSortedArray($array) {
+                foreach($array as $teamss => $score) {
+            ?>
+                    <tr>
+                        <td><?php echo( $teamss ); ?></td>
+                        <td><?php echo( $score ); ?></td>
+                    </tr>
+            <?php
+                }
+            }       
                 $teams = array(
                      "Atalanta" => array(3, 1, 3, 3, 3, 1, 3),
                      "Bolonga" => array(0, 1, 0, 1, 1, 3, 0),
@@ -65,14 +66,13 @@
                     arsort($final);
                     // print_r($teampointsArray);
                     //printOutSortedArray($teampointsArray);
-                    printOutSortedArray($final);
-                    
-                    function printOutSortedArray($array) {
-                        foreach($array as $teamss => $score) {
-                            echo($teamss . " " . $score . "<br>");
-                        }
-                    }  
-            ?>          
+            ?>
+                    <table>
+                        <tr><th>Team</th><th>Points</th></tr>
+            <?php
+                        printOutSortedArray($final)
+            ?>
+                    </table>
         </section>
     </body>
     <footer> 
