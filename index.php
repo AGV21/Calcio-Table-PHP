@@ -38,40 +38,40 @@
                      "Torino" => array(3, 1, 3, 0, 3, 0, 0),
                      "Udinese" => array(0, 1, 3, 3, 3, 3, 3),
                      "Verona" => array(0, 1, 0, 1, 3, 0, 0));
-                    //arsort($teams);
+
                     function italy(){
                         echo"Serie A <br>";
                     }
                     italy();
+                    $teamNames = [];
                     $teampointsArray = [];
                     foreach ( $teams as $team => $points ) {
                     //echo( $team . " total points is ");
                         $currentTeamPointsTotal = 0;
                         for( $currentTeamPointsIndex = 0; $currentTeamPointsIndex < count( $points ); $currentTeamPointsIndex++ ) {
                             $currentTeamPointsTotal = $currentTeamPointsTotal + $points[ $currentTeamPointsIndex ];
-                        
                         }
-                    // $teampoints = array($currentTeamPointsTotal);
-                    array_push($teampointsArray, $team, $currentTeamPointsTotal);
+                    array_push($teampointsArray, $currentTeamPointsTotal);
+                    array_push($teamNames, $team);
+                    $final = array_combine($teamNames, $teampointsArray);
+                    //array_merge($teamArray, $teampointsArray);
                     //print_r(sort($teampoints[0]) .  "<br>");
                     /*echo($currentTeamPointsTotal . "<br>" );*/}
-                    echo(gettype($teampointsArray));
+                    //echo(gettype($final));
+                    //echo(gettype($teampointsArray));
                     // print_r($teampointsArray);
                     // print_r($teampointsArray[0]);
-                    rsort($teampointsArray);
+                    //rsort($teampointsArray);
+                    arsort($final);
                     // print_r($teampointsArray);
-                    printOutSortedArray($teampointsArray);
-
-                    function printOutSortedArray($array) {
-                        foreach($array as $team => $score) {
-                            echo($score . "<br>");
-                        }
-                    }
-
-        
-
-
+                    //printOutSortedArray($teampointsArray);
+                    printOutSortedArray($final);
                     
+                    function printOutSortedArray($array) {
+                        foreach($array as $teamss => $score) {
+                            echo($teamss . " " . $score . "<br>");
+                        }
+                    }  
             ?>          
         </section>
     </body>
