@@ -20,9 +20,21 @@
     ?>
                         class="currentLeader";
     <?php
+                    }elseif ($currentTeamNumber >= 1 && $currentTeamNumber  <=4){
+    ?>
+                        class="UCL";
+    <?php
                     }elseif ($currentTeamNumber == 5){
     ?>
                         class="UEL";
+    <?php           
+                    }elseif ($currentTeamNumber == 6){
+    ?>
+                        class="CL";
+    <?php
+                    }elseif ($currentTeamNumber >= 18 && $currentTeamNumber <= 19){
+    ?>
+                        class="Reg";
     <?php
                     }elseif ($currentTeamNumber == 20){
     ?>
@@ -79,7 +91,7 @@
                     arsort($final);
             ?>
                     <table>
-                        <tr><th>Team</th><th>Points</th></tr>
+                        <tr><th>Club</th><th>Points</th></tr>
             <?php
                         printOutSortedArray($final)
             ?>

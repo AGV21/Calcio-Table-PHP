@@ -1,21 +1,28 @@
 table, tr, td, th {
     border: 1px solid black;
     border-collapse: collapse;
-    /*background-color: lightblue;
-    background-color: lightcyan;
-    background-color: lightgreen;
-    background-color: lightcoral;
-    background-color: red;*/
 } 
 
 .currentLeader{
     background-color: lightblue;
 }
 
+.UCL{
+    background-color: lightcyan;
+}
+
 .UEL{
-    background-color: lightsalmon;
+    background-color: rgb(249, 96, 35);
+}
+
+.CL{
+    background-color: lightgreen;
+}
+
+.Reg{
+    background-color: lightcoral;
 }
 
 .lastPlace{
-    background-color: red;
+    background-color: rgb(243, 87, 87); 
 }
