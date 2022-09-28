@@ -9,7 +9,7 @@
             <section>
                 <?php
                 $currentTeamNumber = 0;
-                
+                /*fucntion with foreach statement in it to color rows depending on placement*/
                 function printOutSortedArray($array) {
                     foreach($array as $teamss => $score) {
                         global $currentTeamNumber;
