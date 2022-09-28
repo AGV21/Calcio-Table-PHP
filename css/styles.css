@@ -1,3 +1,4 @@
+/*stylize background and postioning*/
 #mainContainer{
     width: 300px;
     height: 70vh;
@@ -15,19 +16,21 @@ div.trans{
     background: rgba(0, 0, 0, .5);
 }
 
-table, tr, td, th {
+/*stylize tables looks and postioning*/
+table, tr, td, th{
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
     border-collapse: collapse;
-} 
+    color: ;
+}
 
 .currentLeader{
-    background-color: lightblue;
+    background-color: rgb(0, 191, 255);
 }
 
 .UCL{
-    background-color: lightcyan;
+    background-color: rgb(137, 219, 246);
 }
 
 .UEL{
@@ -48,4 +51,10 @@ table, tr, td, th {
 
 .Rest{
     background-color: white;
+}
+
+footer{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
 }

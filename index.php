@@ -16,45 +16,47 @@
                         $currentTeamNumber +=1;
                 ?>
                         <tr 
-        <?php
+                <?php
                         if ( $currentTeamNumber == 1 ) {
-        ?>
+                ?>
                             class="currentLeader";
-        <?php
+                <?php
                         }elseif ($currentTeamNumber >= 1 && $currentTeamNumber  <=4){
-        ?>
+                ?>
                             class="UCL";
-        <?php
+                <?php
                         }elseif ($currentTeamNumber == 5){
-        ?>
+                ?>
                             class="UEL";
-        <?php           
+                <?php           
                         }elseif ($currentTeamNumber == 6){
-        ?>
+                ?>
                             class="CL";
-        <?php
+                <?php
                         }elseif ($currentTeamNumber >= 18 && $currentTeamNumber <= 19){
-        ?>
+                ?>
                             class="Reg";
-        <?php
+                <?php
                         }elseif ($currentTeamNumber == 20){
-        ?>
+                ?>
                             class="lastPlace";
-        <?php
+                <?php
                         }elseif ($currentTeamNumber >= 7 && $currentTeamNumber <= 17){
-        ?>
+                ?>
                             class="Rest"
-        <?php
+                <?php
 
                         }
-        ?>
+                ?>
                         >
                             <td><?php echo( $teamss ); ?></td>
                             <td><?php echo(  $score ); ?></td>
                         </tr>
+            </section>
+            <section>
                 <?php
                     }
-                }       
+                }   /*two-dimensional array containing team names and their points from games played*/  
                     $teams = array(
                         "Atalanta" => array(3, 1, 3, 3, 3, 1, 3),
                         "Bolonga" => array(0, 1, 0, 1, 1, 3, 0),
@@ -79,7 +81,7 @@
 
                         $teamNames = [];
                         $teampointsArray = [];
-
+                        /*foreach statment to add teams points earned to get current points earned in total*/
                         foreach ( $teams as $team => $points ) {
                             $currentTeamPointsTotal = 0;
                             for( $currentTeamPointsIndex = 0; $currentTeamPointsIndex < count( $points ); $currentTeamPointsIndex++ ) {
@@ -97,10 +99,10 @@
                             printOutSortedArray($final)
                 ?>
                         </table>
+                <footer> 
+                    <P>AGV21 Project</p>
+                </footer> 
             </section>
         </div>
     </body>
-    <footer> 
-        <P>AGV21 Project</p>
-    </footer> 
 </html>
