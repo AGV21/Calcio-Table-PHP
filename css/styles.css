@@ -1,4 +1,23 @@
+#mainContainer{
+    width: 300px;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../images/juve.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+div.trans{
+    margin: 30px;
+    background: rgba(0, 0, 0, .5);
+}
+
 table, tr, td, th {
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid black;
     border-collapse: collapse;
 } 
@@ -25,4 +44,8 @@ table, tr, td, th {
 
 .lastPlace{
     background-color: rgb(243, 87, 87); 
+}
+
+.Rest{
+    background-color: white;
 }
