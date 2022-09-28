@@ -99,10 +99,29 @@
                             printOutSortedArray($final)
                 ?>
                         </table>
-                <footer> 
-                    <P>AGV21 Project</p>
-                </footer> 
             </section>
+            <section>
+                <!--added form to collect info-->
+                <form>
+                    <label for="Home">Home:</label>
+                    <!-- input is text based-->
+                    <input type="text"><br>
+                    <label for="Away">Away:</label>
+                    <!-- input is text based-->
+                    <input type="text"><br>
+                    <label for="Home score">Home score:</label>
+                    <!--input is number based-->
+                    <input type="number"><br>
+                    <label for="Away score">Away score:</label>
+                    <!--input is number based-->
+                    <input type="number"><br>
+                    <!--br to seperate submit button, input is submit based, info will be submited upon clicking button-->
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            <footer> 
+                <P>AGV21 Project</p>
+            </footer> 
         </div>
     </body>
 </html>

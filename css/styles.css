@@ -1,6 +1,6 @@
 /*stylize background and postioning*/
 #mainContainer{
-    width: 300px;
+    width: 700px;
     height: 70vh;
     margin-left: auto;
     margin-right: auto;
@@ -56,5 +56,9 @@ table, tr, td, th{
 footer{
     margin-left: auto;
     margin-right: auto;
+    color: white;
+}
+
+form{
     color: white;
 }
